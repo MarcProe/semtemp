@@ -1,4 +1,7 @@
 ---
+- hosts: all
+  become: yes
+  tasks:  
 - name: Remove useless packages from the cache
-  ansible.builtin.apt:
-    autoclean: yes
+    ansible.builtin.apt:
+      autoclean: yes
